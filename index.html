@@ -1,24 +1,109 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- CSS Attachments -->
-<link rel="stylesheet" type="text/css" href="res/src/main.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Duck Forge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Forge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="res/src/main.css" />
 </head>
-
 <body>
-	<div id="page">
-		<div id="header">
-		  <div id="logo">
-			<img src="res/img/logo.png" alt="Duck Forge" width="195" height="220">
-		  </div>
-		</div>
-		<div id="content">
-		<br>
-			<img src="res/img/manyducks.png" alt="Many Ducks" width="352" height="200">
-		<div id="footer">
-		</div>
-	</div>
+    <div class="header" id="header">
+        <img src="res\img\logo_on_chevron.png" alt="Duck Forge" class="logo" id="logo">
+    </div>
+    <div class="blank-screen">
+    </div>
+    <div class="section" id="games">
+        <div class="section-title">
+            <h1>Games</h1>
+            <img src="res\img\chevron.png" alt="Our Games">
+        </div>
+    </div>
+    <div class="game" id="game">
+        <img src="res\img\jkl-header.png" alt="Just Keep Looting">
+    </div>
+    <div class="game-description" id="game-description">
+        <iframe src="https://store.steampowered.com/widget/3532030/" frameborder="0" width="646" height="190"></iframe>
+        <img src="res\img\jkl.png" alt="Sweet, sweet loot">
+    </div>
+    <div class="game" id="game">
+        <img src="res\img\md-header.png" alt="Many Ducks">
+    </div>
+    <div class="game-description" id="game-description">
+        <img src="res\img\manyducks.png" alt="Mikhail and a duck">
+        <p>In Many Ducks, the player takes on the role of a cat who takes over an abandoned duck ranch in the charming town of Waddleton Cove, where ducks are companions, performers, and sometimes even a little magical.  As the new duck rancher, the player will raise and train a diverse flock to compete in the town’s annual Duck Parade, a festival where only the most dazzling and unique ducks take center stage.  Along the way, the player will explore a vibrant world, befriend quirky townsfolk, and uncover duck-related mysteries. </p>
+    </div>
+    
+    <div class="section" id="about">
+        <div class="section-title">
+            <h1>About Us</h1>
+            <img src="res\img\chevron.png" alt="About Us">
+        </div>
+    </div>
+    <div class="content" id="content">
+        <h2>The Studio</h2>
+        <p>Duck Forge is a fully remote indie studio, mostly located in Canada, created by industry veterans who want to work on what they're passionate about. Or at least what their four legged overlords are passionate about.</p>
+        <h2>Our Mission</h2>
+        <p>thinking on that for now</p>
+        <h2>Our Values</h2>
+        <div class="values" id="values">
+            <h3>Commitment</h3>
+            <h3>Community</h3>
+            <h3>Creativity</h3>
+            
+            
+        </div>
+        <div class="values" id="values">
+            <div>
+                <p>Commitment can mean a lot of things to a lot of people. To us, it means doing what you say you're going to do. No passing the buck, no excuses. We get it done. When things turn out the way they're supposed to, there's another important word we use to represent that: quality.</p>
+                <br>
+                <p>Commitment is a two way street. Just as we ask our team to commit to getting things done, we as a studio make a commitment to them. We are committed to trusting, respecting, and valuing our team. As long as the work is getting done, it doesn't matter how you work, when you work, or where you work. Results are what matter.</p>
+            </div>
+            <div>
+                <p>We talk a lot about Community at Duck Forge. We, as a team, are our own community. We, as individuals, are part of many different communities. From the groups that define us, to the areas we live in. These are all our communities and they are all important.</p>
+                <br>
+                <p>We seek to provide representation for communities and provide them a voice because through diversity we gain strength. The more voices we have at the table, the stronger we can speak.</p>
+            </div>
+            <div>
+                <p>Everyone is creative: fact. We respect the creativity that everyone brings to the table, from artists to programmers. We believe in nurturing the creativity in everyone because through creativity comes passion, and through passion comes success. We want everything we do to be driven by creativity and passion, because when you are excited and passionate about what you're doing, you don't need any extra motivation to do your best work. If everyone is doing their best work, well that's when the magic happens.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="contact">
+        <div class="section-title">
+            <h1>Contact Us</h1>
+            <img src="res\img\chevron.png" alt="Contact Us">
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <H2>Find us:</H2>
+        <a href="https://store.steampowered.com/developer/duckforge/"><img src="res/img/steam_contrast.png" alt="Find us on Steam"></a>
+        <a href="https://discord.gg/y6WCRE8g"><img src="res/img/Discord-CTA_03_White.png" alt="Join us on Discord"></a>
+
+    </div>
+    <script>
+        window.addEventListener('scroll', function () {
+            let scrollY = window.scrollY
+            let header = document.getElementById('header');
+            let logo = document.getElementById('logo');
+            let logoLeft = Math.min(50 + (scrollY/window.innerHeight*40), 85) + '%';
+            let newHeight = (1 - scrollY / window.innerHeight) * 100;
+            if (newHeight >= 100) {
+                newHeight = '100vh';
+            } else if (newHeight <= 15){
+                newHeight = '15vh';
+            } else {
+                newHeight = newHeight + 'vh';
+            }
+            
+            header.style.position = 'fixed';
+            header.style.height = newHeight;
+            logo.style.height = newHeight;
+            logo.style.left = logoLeft;
+            logo.style.width = 'auto';
+            logo.style.transform = 'translateX(-50%)';
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.hero-section {
+    background-color: #333;  /* Dark grey banner */
+    color: #fff;
+    padding: 2em 10%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo img {
+    width: 80px;
+}
+
+.header-text {
+    text-align: center;
+    flex: 1;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-text .tagline {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+.header-button .cta-button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about-section, .game-section {
+    padding: 2em 10%;
+    background-color: #fff;
+    text-align: left;
+}
+
+.about-section h2, .game-section h2 {
+    margin-bottom: 1em;
+}
+
+/* Game Logo in About Many Ducks Section */
+.game-logo {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.game-logo .game-logo-image {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* Screenshots Section */
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.screenshots img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Team Section */
+.team-section {
+    padding: 2em 10%;
+    background-color: #f4f4f9;
+    text-align: left;
+}
+
+.team-section img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+/* Footer */
+footer {
+    padding: 1em;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}

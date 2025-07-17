@@ -38,6 +38,11 @@ body {
     padding: 0px;
 }
 
+.footer .socials img {
+    width: 40px;
+    padding: 10px;
+}
+
 .menu {
     position: sticky;
     top: 0;

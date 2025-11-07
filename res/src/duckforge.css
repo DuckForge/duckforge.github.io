@@ -16,6 +16,12 @@ body {
     padding: 10px 0px 10px 0px;
 }
 
+.heading1 {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 0px 10px 0px;
+}
+
 .footer {
     background: #333333;
     color: #FFE030;

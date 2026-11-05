@@ -1,5 +1,6 @@
 html {
     scroll-padding-top: 3.5rem;
+    color-scheme: light;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #333333;
+    background: #ffffff;
 }
 
 .title_text {
@@ -147,4 +149,14 @@ body {
 }
 .card .game_description {
     font-size: 16px;
+}.card .title_text a {
+    color: inherit;
+    text-decoration: none;
+}
+.card .more {
+    font-weight: bold;
+    color: #333333;
+    text-decoration: underline;
+    text-decoration-color: #FFE030;
+    text-decoration-thickness: 3px;
 }

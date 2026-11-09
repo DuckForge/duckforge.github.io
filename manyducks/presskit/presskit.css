@@ -1,0 +1,282 @@
+:root {
+    --bg: #fff8e7;
+    --panel: #ffffff;
+    --line: #f1dfb4;
+    --blue: #1670b5;
+    --blue-dark: #0e4f82;
+    --yellow: #ffd52e;
+    --orange: #f28a2e;
+    --text: #2e2a24;
+    --muted: #6d6456;
+    --dark: #333333;
+}
+
+html {
+    scroll-padding-top: 4.5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+}
+
+img, video { max-width: 100%; display: block; }
+a { color: var(--blue); }
+
+h1, h2, h3 {
+    font-family: 'Lilita One', sans-serif;
+    font-weight: normal;
+    color: var(--blue);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+h2 {
+    font-size: 30px;
+    margin: 0 0 16px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--yellow);
+}
+h3 { font-size: 21px; margin: 24px 0 6px; }
+
+/* Menu, matching the main Duck Forge site */
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 55px;
+}
+.menu img { height: 55px; }
+.menu .links { display: flex; align-items: center; gap: 20px; }
+.menu .links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--yellow);
+}
+.menu .links a.buy {
+    background: var(--yellow);
+    color: var(--dark);
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* Hero banner */
+.hero {
+    position: relative;
+    background: #1f2a3a url(images/library_hero.jpg) center / cover no-repeat;
+    aspect-ratio: 1920 / 620;
+    max-height: 420px;
+    width: 100%;
+}
+.hero-title {
+    max-width: 1140px;
+    margin: -60px auto 0;
+    padding: 0 24px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 40px;
+    align-items: end;
+}
+.hero-title img {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 4px solid #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,.2);
+}
+.hero-title h1 { font-size: 44px; margin: 0 0 4px; }
+.hero-title p { margin: 0 0 6px; color: var(--muted); font-weight: 600; }
+
+/* Two-column presskit() layout */
+.layout {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.toc {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 0;
+}
+.toc a {
+    display: block;
+    padding: 4px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+}
+.toc a:hover { background: var(--bg); color: var(--blue); }
+
+.facts {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+.facts h2 { font-size: 22px; }
+.facts dl { margin: 0; }
+.facts dt {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--muted);
+    margin-top: 12px;
+}
+.facts dt:first-child { margin-top: 0; }
+.facts dd { margin: 0; font-size: 15px; }
+
+main section { margin-bottom: 52px; }
+main p { margin: 0 0 14px; }
+
+.lede {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--blue-dark);
+}
+
+.notice {
+    background: #fff1c2;
+    border-left: 5px solid var(--orange);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 15px;
+}
+
+ul.features { padding-left: 20px; }
+ul.features li { margin-bottom: 6px; }
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.feature video, .feature img { width: 100%; border-radius: 8px; }
+.feature h3 { margin-top: 0; }
+
+/* Media grids */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
+}
+.grid a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    transition: transform .15s;
+}
+.grid a:hover { transform: translateY(-2px); }
+.grid img { width: 100%; }
+
+.art {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+}
+.art figure {
+    margin: 0;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px;
+}
+.art figure > a { display: flex; align-items: center; justify-content: center; height: 170px; }
+.art figure img { max-height: 170px; object-fit: contain; }
+.art figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+.clips {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+}
+.clips figure { margin: 0; }
+.clips video { width: 100%; border-radius: 8px; background: #000; }
+.clips figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+.button {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 6px;
+    margin: 4px 8px 4px 0;
+}
+.button:hover { background: var(--blue-dark); }
+.button.alt { background: var(--yellow); color: var(--dark); }
+
+.steam iframe { display: block; max-width: 646px; width: 100%; margin-top: 8px; }
+
+.links-list { list-style: none; padding: 0; margin: 0; }
+.links-list li { margin-bottom: 6px; overflow-wrap: anywhere; }
+
+.small { font-size: 13px; color: var(--muted); }
+
+/* Footer, matching the main Duck Forge site */
+.footer {
+    background: var(--dark);
+    color: #fff;
+    padding: 30px 16px;
+    text-align: center;
+}
+.footer .socials img { height: 40px; display: inline-block; margin: 0 6px; }
+.footer .logo { height: 50px; display: inline-block; margin-top: 16px; }
+.footer a { color: var(--yellow); }
+
+@media print {
+    html { scroll-padding-top: 0; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .menu { position: static; }
+    .menu .links, .toc, .steam, #videos, .button { display: none; }
+    .layout { display: block; padding-top: 16px; }
+    .sidebar { margin-bottom: 28px; }
+    .hero-title { margin-top: -40px; }
+    .facts dl { column-count: 2; column-gap: 32px; }
+    .facts dt { break-after: avoid; }
+    .facts dd { break-inside: avoid; }
+    .feature, .grid a, .art figure { break-inside: avoid; }
+    h2, h3 { break-after: avoid; }
+}
+
+@media (max-width: 860px) {
+    .menu { padding: 0 16px; }
+    .menu .links a:not(.buy) { display: none; }
+    .menu img { height: 44px; }
+    .hero-title { display: flex; flex-direction: column; align-items: flex-start; margin-top: -40px; padding: 0 16px; gap: 8px; }
+    .hero-title img { width: 180px; }
+    .hero-title h1 { font-size: 36px; }
+    .layout { grid-template-columns: minmax(0, 1fr); padding: 24px 16px 40px; gap: 28px; }
+    .sidebar { position: static; }
+    .toc { display: none; }
+    .feature { grid-template-columns: 1fr; }
+}
